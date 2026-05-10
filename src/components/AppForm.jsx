@@ -18,6 +18,8 @@ export default function AppForm ({posts, setPosts}){
             ...postObj,
             [event.target.name]:[event.target.value]
         })
+        console.log(postObj);
+        
 
         setPosts(...posts, postObj)
         
