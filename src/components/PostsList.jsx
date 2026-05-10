@@ -1,4 +1,4 @@
-export default function PostsList({posts}){
+export default function PostsList({posts, setPosts}){
     
     
 

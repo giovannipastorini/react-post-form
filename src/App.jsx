@@ -14,8 +14,8 @@ function App() {
   return (
     <>
       <h1>Add blog post:</h1>
-      <AppForm />
-      <PostsList posts={posts} />
+      <AppForm posts={posts} setPosts={setPosts}  />
+      <PostsList posts={posts} setPosts={setPosts} />
     </>
   )
 }
