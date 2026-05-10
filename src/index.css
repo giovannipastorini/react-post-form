@@ -1,1 +1,5 @@
 @import url('bootstrap');
+
+form{
+    background-color: var(--bs-info);
+}
