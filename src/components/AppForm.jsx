@@ -11,22 +11,32 @@ export default function AppForm ({posts, setPosts}){
     })
 
     function handleFormData (event){
-        event.preventDefault();	
-        console.log("il form è stato inviato");
 
         setPostObj({
             ...postObj,
-            [event.target.name]:[event.target.value]
+            [event.target.name]: event.target.value,
         })
-        console.log(postObj);
+        //console.log(postObj);
         
+    }
 
-        setPosts(...posts, postObj)
+    function handleFormSubmit(){
+        event.preventDefault();	
+        console.log("il form è stato inviato");
+
+        const idValue=posts.length+1;
+        setPostObj({
+            ...postObj,
+            id:idValue
+        })
+
+        setPosts([...posts, postObj])
+        
         
     }
 
     return(
-        <form onSubmit={handleFormData}>
+        <form onSubmit={handleFormSubmit}>
             <div className="container my-5"> 
                     <div className="mb-3">
                         <label className="form-label">Author:</label>
